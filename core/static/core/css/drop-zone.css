@@ -1,0 +1,97 @@
+.drop-zone--out {
+    display: flex;
+    background-color: var(--light-purple);
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    width: 80%;
+    height: 40rem;
+    cursor: pointer;
+    padding: 2rem;
+    transition: .3s;
+}
+
+.drop-zone--out * {
+    pointer-events: none;
+}
+
+.drop-zone--in {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: var(--dark-purple);
+    border: 1.5px dashed transparent;
+    transition: .3s;
+}
+
+.drop-zone--in--over {
+    border-color: white;
+}
+
+.drop-zone--over {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.drop-zone__thumbnail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.drop-zone__thumbnail-icon {
+    width: 8rem;
+    height: 8rem;
+    transform: translateY(-3rem);
+}
+
+.drop-zone__thumbnail::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3rem;
+    width: 100%;
+    color: white;
+    background-color: var(--dark-gray);
+    padding: .5rem 1rem;
+}
+
+
+.drop-zone__input {
+    display: none;
+}
+
+.drop-zone__placeholder-icon {
+    fill: inherit;
+    width: 5rem;
+    filter: inherit;
+    height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.drop-zone__placeholder {
+    transition: .3s;
+    fill: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    width: 80%;
+    animation: 3s ease-in-out vertical-flowing infinite;
+    text-align: center;
+}
+
+
+

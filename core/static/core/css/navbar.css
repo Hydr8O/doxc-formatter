@@ -1,0 +1,135 @@
+.nav {
+    font-size: 1.8rem;
+    grid-column: full-start / full-end;
+    grid-row: nav-start / nav-end;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 0 3rem;
+}
+
+.nav__list {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    transition: background-color .3s;
+}
+
+.nav__link {
+    display: block;
+    padding: .5rem 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid transparent;
+    transition: background-color .3s;
+    color: white;
+}
+
+.nav__link:hover {
+    background-color: var(--orange);
+    border: 1px solid white;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.nav__item:hover .nav__logout {
+    background-color: var(--orange);
+    border: 1px solid white;
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.nav__logout {
+    font-family: inherit;
+    border: 1px solid transparent;
+    background-color: var(--dark-blue);
+    cursor: pointer;
+    color: white;
+    font-size: 1.8rem;
+    padding: .5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color .3s;
+}
+
+.username {
+    color: white;
+}
+
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 1070px) {
+    .nav__list {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .nav__list {
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--dark-blue);
+        right: 0;
+        width: 30%;
+        height: 92vh;
+        z-index: 1;
+        transform: translateX(100%);
+        transition: transform .5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        top: 8vh;
+    }
+
+    .hidden--nav {
+        transform: translateX(0);
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    .bar {
+        width: 3.5rem;
+        height: .4rem;
+        background-color: white;
+        margin: .6rem 0;
+        transition: 0.4s;
+        border-radius: var(--border-radius);
+    }
+
+    .change--burger .bar--1 {
+        transform: rotate(-45deg) translate(-.7rem, .4rem) ;
+    }
+
+    .change--burger .bar--2 {
+        opacity: 0;
+    }
+
+    .change--burger .bar--3 {
+        transform: rotate(45deg) translate(-1rem, -.7rem) ;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .nav__list {
+        width: 50%;
+    }
+}

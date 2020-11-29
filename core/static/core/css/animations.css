@@ -1,0 +1,28 @@
+@keyframes fade-in-left {
+    0% {
+        transform: translateX(-2rem);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes vertical-flowing {
+    0% {
+        transform: translateY(.5rem);
+    }
+
+
+    50% {
+        transform: translateY(-.5rem);
+    }
+
+    100% {
+        transform: translateY(.5rem);
+    }
+}

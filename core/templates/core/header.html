@@ -1,0 +1,44 @@
+{% load static %}
+<header class="header">
+    <div class="header__content">
+        <div class="header__left">
+            <h1 class="heading-main">
+                Оформи работу в один клик
+            </h1>
+            <p class="paragraph paragraph--header">
+                На этом сайте вы сможете оформить доклад или курсовую работу за несколько секунд!
+            </p>
+            <div class="header__features">
+                <div class="header__feature">
+                    <svg class="icon">
+                        <use xlink:href="{% static 'core/SVG/sprite.svg' %}#icon-thumbs-up"></use>
+                    </svg>
+                    <div class="header__feature-text">
+                        Наш услуги абсолютно бесплатны
+                    </div>
+                </div>
+                <div class="header__feature">
+                    <svg class="icon">
+                        <use xlink:href="{% static 'core/SVG/sprite.svg' %}#icon-happy"></use>
+                    </svg>
+                    <div class="header__feature-text">
+                        Оформление в один клик. Вам больше не нужно разбираться в функционале MS Word!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__right">
+            <ul class="header__list">
+                <li class="header__list-item">
+                    Загрузите свою работу
+                </li>
+                <li class="header__list-item">
+                    Кликните на кнопку оформить
+                </li>
+                <li class="header__list-item">
+                    Получите оформленную работу
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="instructions">
+        <div class="instruction-card">
+            <h3 class="instruction-card__heading">
+                Подготовьте документ к оформлению
+            </h3>
+            <div class="instruction__content">
+                Подготовьте документ к оформлению, следуя нескольким простым правилам
+            </div>
+            <svg class="instruction-card__icon">
+                <use xlink:href="{% static 'core/SVG/sprite.svg' %}#icon-filter_1"></use>
+            </svg>
+        </div>
+        <div class="instruction-card">
+            <h3 class="instruction-card__heading">
+                Загрузите документ в окно загрузки
+            </h3>
+            <div class="instruction__content">
+                Загрузите документ, перетащив его или кликнув на окно загрузки
+            </div>
+            <svg class="instruction-card__icon">
+                <use xlink:href="{% static 'core/SVG/sprite.svg' %}#icon-filter_2"></use>
+            </svg>
+        </div>
+        <div class="instruction-card">
+            <h3 class="instruction-card__heading">
+                Нажмите кнопку "Оформить"
+            </h3>
+            <div class="instruction__content">
+                Нажмите кнопку "Оформить" и получите оформленный документ
+            </div>
+            <svg class="instruction-card__icon">
+                <use xlink:href="{% static 'core/SVG/sprite.svg' %}#icon-filter_3"></use>
+            </svg>
+        </div>
+    </div>
+    <div class="content">
+        {% include 'core/messages.html' %}
+        <form class="form" action="{% url 'format:format' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% include 'core/drop_zone.html' %}
+            <div class="form__form-group">
+                <input type="checkbox" name="hyphen" id="hyphen">
+                <label class="form__checkbox-label" for="hyphen">Автоперенос слов</label>
+            </div>    
+            <button class="button" type="submit">Оформить</button>
+        </form>
+    </div>
+{% endblock %}

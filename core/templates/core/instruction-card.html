@@ -1,0 +1,12 @@
+{% load static %}
+<div class="instruction-card">
+    <h3 class="instruction-card__heading">
+        {{ heading }}
+    </h3>
+    <div class="instruction__content">
+        {{ content }}
+    </div>
+    <svg class="instruction-card__icon">
+        <use xlink:href="{% static 'core/SVG/sprite.svg' %}#{{ icon }}"></use>
+    </svg>
+</div>

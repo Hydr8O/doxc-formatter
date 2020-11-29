@@ -1,0 +1,59 @@
+.instructions {
+    display: grid;
+    grid-row: instructions-start / instructions-end;
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+    align-items: center;
+    justify-items: center;
+    padding: 4rem;
+}
+
+
+
+.instruction-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--dark-green);
+    border-radius: var(--border-radius);
+    outline: 1rem solid white;
+    width: 30rem;
+    height: 100%;
+    position: relative;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.instruction__content {
+    margin: 2rem 0;
+    text-align: center;
+    width: 90%;
+    font-size: 1.8rem;
+}
+
+.instruction-card__heading {
+    color: var(--dark-green);
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+.instruction-card__icon {
+    fill: var(--dark-green);
+    height: 4rem;
+    width: 4rem;
+    margin-top: auto;
+}
+
+@media (max-width: 1000px) {
+    .instructions {
+        grid-template-columns: 1fr;
+    }
+
+    .instruction-card {
+        width: 80%;
+    }
+}

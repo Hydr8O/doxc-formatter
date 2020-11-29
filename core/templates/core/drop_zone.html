@@ -1,0 +1,17 @@
+{% load static %}
+<div class="drop-zone--out">
+    <div class="drop-zone--in">
+        <div class="drop-zone__thumbnail hidden">
+            <svg class="drop-zone__thumbnail-icon">
+                <use xlink:href="{% static 'core/SVG/sprite.svg' %}#icon-file-text2"></use>
+            </svg>
+        </div>
+        <div class="drop-zone__placeholder">
+            <svg class="drop-zone__placeholder-icon">
+                <use xlink:href="{% static 'core/SVG/sprite.svg' %}#icon-cloud-upload"></use>
+            </svg>
+            Перетащите файл или кликните для загрузки
+        </div>
+        <input type="file" name="doc" id="doc" class="drop-zone__input">
+    </div>
+</div>

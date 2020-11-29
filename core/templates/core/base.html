@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    {% block css_links %}
+    {% endblock %}
+    <title>Оформить работу</title>
+</head>
+<body class="stop-transition">
+    <div class="container">
+        {% include 'core/header.html' %}
+        {% block content %}
+        {% endblock %}
+        {% include 'core/footer.html' %}
+    </div>
+    <script src="{% static 'core/js/main.js' %}"></script>
+</body>
+</html>

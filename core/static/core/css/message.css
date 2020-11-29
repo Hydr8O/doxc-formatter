@@ -1,0 +1,37 @@
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border-radius: var(--border-radius);
+    margin: 1rem;
+}
+
+.message--info {
+    background-color: var(--light-blue);
+}
+
+.message--error {
+    background-color: var(--light-red);
+}
+
+.message--success {
+    background-color: var(--light-green);
+}
+
+.message--animated {
+    animation: fade-in .4s ease-in forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
